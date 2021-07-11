@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>File upload</h1>
+        <%= typeof msg != 'undefined' ? msg : ''%>
+
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="file-field input-field">
+              <div class="btn grey">
+                <span>File</span>
+
+                <input type="file" name="myImage" required multiple>
+            
+
+              </div>
+              <div class="file-path-wrapper">
+              
+              </div>
+            </div>
+            <br>
+            <br>
+
+            <button name="man" type="submit" class="btn">Upload file</button>
+          </form>
+
+          <br>
+          <hr>
+          <img src="<%= typeof file != 'undefined' ? file : ''%>" class="responsive-img" alt="" srcset="">
+                
+    </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</body>
+</html>
